@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<body>
+    <h1 onclick="console.log('vala achoni')"> Event chal rahi he..</h1> 
+    <button onclick="alert(7)">Click me for alert</button> 
+    <button onclick="console.log(7)">Click me for js</button> 
+
+    <button onclick="document.body.style.backgroundColor='yellow'">Click me: Yellow</button> 
+
+    <button onclick="makeRed()">Click me: Red</button> 
+
+    <button id="make-blue-button">Click me: Blue</button> 
+
+    <button id="make-green-button">Click me: Green</button> 
+
+    <button id="make-goldenrod-button">Click me: Golden Rod</button> 
+
+    <button id="make-hotpink-button">Click me: Hot Pink</button> 
+
+    <button id="make-lightblue-button">Click me: Light Blue</button> 
+
+
+    <p id="clicking-method"> </p>
+
+    <input type="text"  id="name-field">
+    <button id="update-name"> Update </button>
+
+
+    <button onclick="handleFunction()"> Just for function </button>
+    <button id="handle-event"> shortcut </button> <br> <br>
+
+    
+
+    <script>
+        document.getElementById('update-name').addEventListener('click', function(){
+            const name = document.getElementById('name-field');
+            const p=document.getElementById('clicking-method');
+         p.innerText= name.value;
+         name.value = '';
+        });
+        
+    </script>
+     <script src="events.js"></script>
+</body>
+</html>
